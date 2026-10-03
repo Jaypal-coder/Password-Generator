@@ -36,7 +36,6 @@ function App() {
   },[length,numAllowed,charAllowed,passwordGenerator])
 
   return (
-  
   <div className='page'>
     <h1>Password Generator</h1>
 
@@ -44,45 +43,46 @@ function App() {
       <div className='top-row'>
 
         <input 
-        type='text'
-        value={password}
-        ref={passRef}
-        ></input>
+          type='text'
+          value={password}
+          ref={passRef}
+        >
+        </input>
 
         <button 
-        onClick={passcopy}>Copy</button>
-        </div>
+          onClick={passcopy}>Copy
+        </button>
+      </div>
 
         <div className='bottom-row'>
         <input 
-        type='range'
-        min={6}
-        max={100}
-        value={length}
-        onChange={(e)=>{setLength(e.target.value)}}
+          type='range'
+          min={6}
+          max={100}
+          value={length}
+          onChange={(e)=>{setLength(e.target.value)}}
         ></input>
         <label>Length : {length}</label>
 
         <input 
-        type='checkbox'
-        defaultChecked={numAllowed}
-        onChange={()=>{
-          setNumAllowed((prev)=>!prev)
+          type='checkbox'
+          defaultChecked={numAllowed}
+          onChange={()=>{
+            setNumAllowed((prev)=>!prev)
         }}
         ></input>
         <label>Numbers Allowed</label>
 
         <input 
-        type='checkbox'
-        defaultChecked={charAllowed}
-        onChange={()=>{
-          setCharAllowed((prev)=>!prev)
+          type='checkbox'
+          defaultChecked={charAllowed}
+          onChange={()=>{
+            setCharAllowed((prev)=>!prev)
         }}
         ></input>
         <label>Characters Allowed</label>
 
         </div>
-
      </div>
   </div>
   
